@@ -1,0 +1,70 @@
+<div class="form-container">
+    <mat-grid-list cols="12" rowHeight="5rem">
+
+        <!-- application -->
+        <mat-grid-tile colspan="2">
+            <h3>Application</h3>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4">
+            <mat-form-field appearance="fill">
+                <mat-label>Select</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let food of foods" [value]="food">
+                        {{food}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <!-- version -->
+        <mat-grid-tile colspan="2">
+            <h3>Version</h3>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4">
+            <mat-form-field appearance="fill">
+                <mat-label>Select</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let food of foods" [value]="food">
+                        {{food}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <!-- config -->
+        <mat-grid-tile colspan="2">
+            <h3>Config</h3>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4">
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Legacy</mat-radio-button>
+                <mat-radio-button value="2">Adaptive</mat-radio-button>
+            </mat-radio-group>
+        </mat-grid-tile>
+
+        <!-- request type -->
+        <mat-grid-tile colspan="2">
+            <h3>Request Type</h3>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4">
+            <mat-form-field appearance="fill">
+                <mat-label>Select</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let food of foods" [value]="food">
+                        {{food}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-grid-tile>
+
+        
+
+       
+    </mat-grid-list>
+
+    <div class="form-button">
+        <button mat-raised-button color="primary">Apply</button>
+        <div class="small-gap"></div>
+        <button mat-raised-button>Reset</button>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+$form-width: 60%;
+$form-margin : (100%-$form-width)/2;
+
+.form-container{
+    margin-top: 1rem;
+    padding: 1rem;
+    border: black solid;
+    width: $form-width;
+    margin-left: $form-margin;
+}
+.select-label{
+    float: left;
+    margin-right: 1rem;
+}
+.left-div{
+    font-size: 1rem;
+}
+.right-div{
+    font-size: 1rem;
+}
+.d-filter{
+    float: left;
+}
+
+.my-test{
+    float: left;
+}
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 2rem;
+}
+
+.form-button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.small-gap{
+    margin-right: 1rem;
+    float: left;
+}
