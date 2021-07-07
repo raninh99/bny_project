@@ -10,6 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FilterReportsComponent } from './filter-reports/filter-reports.component';
 import { FilterService } from './filter.service';
+import { GridComponent } from './grid/grid.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FilterService } from './filter.service';
     AppComponent,
     FilterComponent,
     NavBarComponent,
-    FilterReportsComponent
+    FilterReportsComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,
