@@ -1,0 +1,47 @@
+[
+    {
+        name: "root",
+        children: [
+            {
+                name: "k1",
+                hvalue:"hvalue1"
+            },
+            {
+                name: "k2",
+                children: [
+                    {
+                        name: "ck1",
+                        hvalue:"chvalue1"
+                    },
+                    {
+                        name: "ck2",
+                        hvalue:"chvalue2"
+                    }
+                ]
+            },
+            {
+                name: "k3",
+                children: [
+                    {
+                        name: "0",
+                        children: [
+                            {
+                                name: "ak1",
+                                hvalue:"ahvalue1"
+                            }
+                        ]
+                    },
+                    {
+                        name: "1",
+                        children: [
+                            {
+                                name: "ak2",
+                                hvalue:"ahvalue2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

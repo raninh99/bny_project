@@ -1,0 +1,24 @@
+[
+    {
+        "root":{
+            "k1":"value1",
+            "k2":{
+                "ck1":"cvalue1",
+                "ck2":"cvalue1"
+            },
+            "k1":[
+                {
+                    "ak1":"avalue",
+                },
+                {
+                    "ak2":"avalu3"
+                }
+            ]
+        }
+    }
+]
+
+{
+    "name":,
+    "children":
+}
