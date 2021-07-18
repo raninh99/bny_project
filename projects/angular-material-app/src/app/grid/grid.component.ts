@@ -1,7 +1,8 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
-import {SelectionModel} from '@angular/cdk/collections';
+import { MatDialog } from '@angular/material/dialog';
+import { TabDialogComponent } from '../tab-dialog/tab-dialog.component';
 
 @Component({
   selector: 'app-grid',
@@ -15,7 +16,8 @@ export class GridComponent implements AfterViewInit {
   
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   
-
+  constructor(public dialog: MatDialog){}
+  
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
 
@@ -24,7 +26,15 @@ export class GridComponent implements AfterViewInit {
     
   }
 
+  
 
+  func(row:any) {
+    const dialogRef = this.dialog.open(TabDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
   
 
 

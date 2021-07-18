@@ -10,7 +10,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDialogModule} from '@angular/material/dialog';
 
 const MaterialComponents = [
   MatGridListModule,
@@ -23,7 +25,11 @@ const MaterialComponents = [
   MatTabsModule,
   MatCheckboxModule,
   MatPaginatorModule,
-  MatTableModule
+  MatTableModule,
+  MatInputModule,
+  MatExpansionModule,
+  MatDialogModule
+  
 ];
 
 @NgModule({

@@ -1,0 +1,29 @@
+<div class="bg-white m-1 mb-1 flex flex-wrap justify-start text-lg text-gray-800 p-2 rounded-lg font-bold font-mono">
+  <div class="w-full max-w-sm flex-col rounded-lg  m-1 p-1">
+    <div class="ml-1 ">Application</div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Select</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food">
+            {{food}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="w-full max-w-sm flex-col  rounded-lg  m-1 p-1">
+    <div class="ml-1 ">Version</div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Select</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let food of foods" [value]="food">
+              {{food}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div>

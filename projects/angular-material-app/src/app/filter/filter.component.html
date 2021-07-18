@@ -3,7 +3,7 @@
 
         <!-- application -->
         <mat-grid-tile colspan="2">
-            <h3>Application</h3>
+            <h3 class="text-green-400">Application</h3>
         </mat-grid-tile>
         <mat-grid-tile colspan="4">
             <mat-form-field appearance="fill">
@@ -98,30 +98,36 @@
             <h3>Updated</h3>
         </mat-grid-tile>
         <mat-grid-tile colspan="4">
-            <input matInput [matDatepicker]="upicker1">
-            <mat-datepicker-toggle matSuffix [for]="upicker1"></mat-datepicker-toggle>
-            <mat-datepicker #upicker1></mat-datepicker>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter a date range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                  <input matStartDate placeholder="Start date">
+                  <input matEndDate placeholder="End date">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+              </mat-form-field>
+              
         </mat-grid-tile>
-        <mat-grid-tile colspan="6">
-            <input matInput [matDatepicker]="upicker2">
-            <mat-datepicker-toggle matSuffix [for]="upicker2"></mat-datepicker-toggle>
-            <mat-datepicker #upicker2></mat-datepicker>
-        </mat-grid-tile>
+        
 
         <!-- created -->
         <mat-grid-tile colspan="2">
             <h3>Created</h3>
         </mat-grid-tile>
         <mat-grid-tile colspan="4">
-            <input matInput [matDatepicker]="cpicker1">
-            <mat-datepicker-toggle matSuffix [for]="cpicker1"></mat-datepicker-toggle>
-            <mat-datepicker #cpicker1></mat-datepicker>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter a date range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                  <input matStartDate placeholder="Start date">
+                  <input matEndDate placeholder="End date">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+              </mat-form-field>
+              
         </mat-grid-tile>
-        <mat-grid-tile colspan="6">
-            <input matInput [matDatepicker]="cpicker2">
-            <mat-datepicker-toggle matSuffix [for]="cpicker2"></mat-datepicker-toggle>
-            <mat-datepicker #cpicker2></mat-datepicker>
-        </mat-grid-tile>
+        
 
     </mat-grid-list>
 
@@ -131,3 +137,5 @@
         <button mat-raised-button>Reset</button>
     </div>
 </div>
+
+

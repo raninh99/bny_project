@@ -1,12 +1,17 @@
 <mat-tab-group mat-align-tabs="start">
     <mat-tab label="Configuration"> 
         
-        <app-filter></app-filter>
+        <app-config-main></app-config-main>
+        
 
     </mat-tab>
+    <mat-tab label="Voilations"> <app-action-config></app-action-config></mat-tab>
+
     <mat-tab label="Reports"> 
         <app-filter-reports></app-filter-reports>
+    
     </mat-tab>
-    <mat-tab label="Voilations"> Content 3 </mat-tab>
+    <mat-tab label="help"> <app-supporting-config></app-supporting-config></mat-tab>
+
 </mat-tab-group>
   
