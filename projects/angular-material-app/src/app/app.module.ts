@@ -19,7 +19,9 @@ import { ConfigMainComponent } from './config-main/config-main.component';
 import { TabDialogComponent } from './tab-dialog/tab-dialog.component';
 import { ComplexJsonComponent } from './complex-json/complex-json.component';
 import { SubmitParamsComponent } from './submit-params/submit-params.component';
-
+import { ParentConfigComponent } from './parent-config/parent-config.component';
+import { ChildConfigComponent } from './child-config/child-config.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { SubmitParamsComponent } from './submit-params/submit-params.component';
     ConfigMainComponent,
     TabDialogComponent,
     ComplexJsonComponent,
-    SubmitParamsComponent
+    SubmitParamsComponent,
+    ParentConfigComponent,
+    ChildConfigComponent
   ],
   entryComponents: [
     TabDialogComponent
@@ -44,8 +48,8 @@ import { SubmitParamsComponent } from './submit-params/submit-params.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
-    
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [FilterService],

@@ -53,9 +53,11 @@
 
     <div class="w-full flex-row rounded-lg  m-1 p-1">
         <button
-            class="bg-blue-700 shadow-lg text-2xl text-white rounded-4xl px-2 py-1/4 justify-center text-center hover:bg-blue-400 mr-2">+</button>
-        <button
-            class="bg-blue-700 shadow-lg text-2xl text-white rounded-4xl px-2 py-1/4  justify-center text-center hover:bg-blue-400 mr-8">-</button>
+            class="bg-blue-700 shadow-lg text-2xl text-white rounded-4xl px-2 py-1/4 justify-center text-center hover:bg-blue-400 mr-2"
+            (click)="onAddButtonClick()">+</button>
+        <button *ngIf="extraAdded"
+            class="bg-blue-700 shadow-lg text-2xl text-white rounded-4xl px-2 py-1/4  justify-center text-center hover:bg-blue-400 mr-8"
+            (click)="onDeleteButtonClick()">-</button>
 
     </div>
 

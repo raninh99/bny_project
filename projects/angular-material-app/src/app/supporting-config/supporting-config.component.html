@@ -1,29 +1,133 @@
-<div class="bg-white m-1 mb-1 flex flex-wrap justify-start text-lg text-gray-800 p-2 rounded-lg font-bold font-mono">
-  <div class="w-full max-w-sm flex-col rounded-lg  m-1 p-1">
-    <div class="ml-1 ">Application</div>
-    <div>
-      <mat-form-field appearance="fill">
-        <mat-label>Select</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let food of foods" [value]="food">
-            {{food}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-  </div>
-
-  <div class="w-full max-w-sm flex-col  rounded-lg  m-1 p-1">
-    <div class="ml-1 ">Version</div>
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Select</mat-label>
-          <mat-select>
-            <mat-option *ngFor="let food of foods" [value]="food">
-              {{food}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+<div class="flex justify-center bg-gray-200">
+  <div
+    class="bg-white m-4 drop-shadow-lg max-w-2xl flex flex-wrap justify-start text-lg text-gray-400 p-1 rounded-lg font-bold font-mono">
+    <div class="flex flex-wrap w-full justify-between">
+      <div class="bg-white mr-4 flex-col rounded-lg  m-1 p-2 flex items-center">
+        <div class="ml-1 ">Application</div>
+        <div>
+          <select
+            class="block  w-44 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+            <option *ngFor="let food of foods" value="food">{{food}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="bg-white mr-4 flex-col rounded-lg  m-1 p-2 flex items-center">
+        <div class="ml-1 ">Version</div>
+        <div>
+          <select
+            class="block  w-44 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+            <option *ngFor="let food of foods" value="food">{{food}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="bg-white mr-4 flex-col rounded-lg  m-1 p-2 flex items-center">
+        <div class="ml-1 ">Request Type</div>
+        <div>
+          <select
+            class="block  w-44 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+            <option *ngFor="let food of foods" value="food">{{food}}</option>
+          </select>
+        </div>
       </div>
     </div>
-    <div>
+
+    <div class="flex flex-wrap w-full justify-between">
+      <div class="bg-white mr-4 flex-col rounded-lg  m-1 p-2 flex items-center">
+        <div class="ml-1 ">Category</div>
+        <div>
+          <select
+            class="block  w-44 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+            <option *ngFor="let food of foods" value="food">{{food}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="bg-white mr-4 flex-col rounded-lg  m-1 p-2 flex items-center">
+        <div class="ml-1 ">Process Code</div>
+        <div>
+          <select
+            class="block  w-44 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+            <option *ngFor="let food of foods" value="food">{{food}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="bg-white mr-4 flex-col rounded-lg  m-1 p-2 flex items-center">
+        <div class="ml-1 ">Event Code</div>
+        <div>
+          <select
+            class="block  w-44 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+            <option *ngFor="let food of foods" value="food">{{food}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="bg-white mr-4 w-full flex-row rounded-lg  m-1 p-2 flex justify-center items-center">
+      <div class="ml-1 ">Config</div>
+      <div class=" flex flex-wrap ml-6">
+
+        <div class="flex items-center">
+          <input id="radio1" type="radio" name="radio" class="hidden" checked />
+          <label for="radio1" class="flex items-center cursor-pointer">
+            <span class="w-4 h-4 inline-block mr-1 rounded-full border border-grey"></span>
+            legacy</label>
+        </div>
+
+        <div class="flex items-center ml-3">
+          <input id="radio2" type="radio" name="radio" class="hidden" />
+          <label for="radio2" class="flex items-center cursor-pointer">
+            <span class="w-4 h-4 inline-block mr-1 rounded-full border border-grey"></span>
+            Adaptive</label>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="flex w-full justify-between">
+      <div class="bg-white max-w-sm flex-col rounded-lg mr-4 m-1 p-2 flex items-center">
+        <div class="ml-1 ">Updated By</div>
+        <div class="bg-white">
+          <mat-form-field class="mb-0 pb-0" appearance="fill">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input class="mb-0 pb-0 max-h-px max-w-sm" [rangePicker]="picker">
+              <input matStartDate placeholder="Start date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="bg-white max-w-sm flex-col rounded-lg mr-4 m-1 p-2 flex items-center">
+        <div class="ml-1 ">Created By</div>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input class="max-h-px max-w-sm" [rangePicker]="picker1">
+              <input matStartDate placeholder="Start date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker1></mat-date-range-picker>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full flex mt-4 justify-end rounded-lg p-1">
+
+      <button
+        class="bg-blue-700 shadow-lg text-white rounded-lg py-2 px-5 justify-center text-center hover:bg-blue-400 mr-2"
+        >Apply</button>
+      <button
+        class="bg-green-700 shadow-lg text-white rounded-lg py-2 px-5 justify-center text-center hover:bg-green-400 mr-8"
+        >Delete</button>
+
+    </div>
+
+  </div>
+</div>

@@ -12,6 +12,9 @@ export class ChildActionConfigComponent implements OnInit {
   // @Input() public item:any;
   @Input() public item:any;
 
+  public extraAdded: number = 0;
+
+
   // @Output() public itemChange= new EventEmitter();
 
   // onChange(event:any){
@@ -25,6 +28,25 @@ export class ChildActionConfigComponent implements OnInit {
 
   
   constructor() { }
+  onAddButtonClick() {
+    this.item.submitParams.push(
+      {
+        "name": "",
+        "value": "",
+        
+      }
+    )
+    this.extraAdded++;
+    console.log("rani", this.item.submitParams);
+  }
+  onDeleteButtonClick() {
+    console.log("isExtra", this.extraAdded)
+    if (this.extraAdded) {
+      this.item.submitParams.pop();
+      this.extraAdded--;
+    }
+
+  }
 
   ngOnInit(): void {
     

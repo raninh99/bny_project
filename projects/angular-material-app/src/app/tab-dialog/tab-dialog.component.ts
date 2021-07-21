@@ -14,12 +14,20 @@ export class TabDialogComponent implements OnInit {
       "actionCd":"RT",
       "hasDialog":true,
       "submitUrl":"/cwf/wfapproval/v1/updateWork/approve",
-      "submitParams":
+      "submitParams":[
         {
-          "processTemplateName": "CRPVOLT_VCOR_EXVC",
-          "bundleActionType": "SA",
-          "bundleCommentType": "p"
+          "name":"processTemplateName",
+          "value":"CRPVOLT_VCOR_EXVC"
+        },
+        {
+          "name":"processTemplateName",
+          "value":"CRPVOLT_VCOR_EXVC"
+        },
+        {
+          "name":"processTemplateName",
+          "value":"CRPVOLT_VCOR_EXVC"
         }
+      ]
       
     },
     
@@ -29,11 +37,13 @@ export class TabDialogComponent implements OnInit {
       "actionCd":"Rq",
       "hasDialog":true,
       "submitUrl":"/cwq/wfapproval/v1/updateWork/approve",
-      "submitParams":
+      "submitParams":[
         {
-          "bundleActionType":"RT"
+          "name":"bundleActionType",
+          "value":"RT"
 
         }
+      ]
       
     }
     
